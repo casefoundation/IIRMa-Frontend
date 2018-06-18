@@ -1,0 +1,226 @@
+// ***********************************
+// Landing page
+// ***********************************
+ .landing-pageouter {
+    width: 100%;
+    height: 100vh;
+    float: left;
+}
+
+.banner-section {
+    width: 33%;
+    min-height: 100vh;
+    float: left;
+    overflow: hidden;
+    background-color: #d0d0d0;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    text-align: center;
+    .logo-block {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        max-width: 355px;
+        padding-top: 110px;
+        line-height: 1px;
+        img {
+            line-height: 1px;
+              width: 100%;
+            @media (max-width: 480px){
+              width: 100%;
+              max-width: 190px;
+              float: left;
+            }
+        }
+    }
+    ul {
+        width: 100%;
+        height: auto;
+        float: left;
+        list-style: none;
+        padding-bottom: 130px;
+        margin-top: -10px;
+        position: relative;
+        @media(max-width: 480px){
+          padding-left: 20px;
+        }
+        &:before {
+            width: 130px;
+            height: 1px;
+            content: "";
+            position: absolute;
+            background: $lighter;
+            left: 50%;
+            margin-left: -65px;
+            bottom: 107px;
+        }
+        li {
+            width: 100%;
+            text-align: center;
+            font-family: $font-family-bold;
+            font-weight: 700;
+            color: $lighter;
+            padding-top: 53px;
+            float: left;
+            position: relative;
+            label {
+                width: 100%;
+                height: auto;
+                float: left;
+                font-size: $font-size-base;
+                line-height: 16px;
+            }
+            span {
+                width: 100%;
+                height: auto;
+                float: left;
+                font-size: $txt-large;
+                line-height: 54px;
+            }
+            &:first-child {
+                padding-top: 82px;
+            }
+            &:before {
+                width: 1px;
+                height: 40px;
+                content: "";
+                position: absolute;
+                background: $lighter;
+                left: 50%;
+                top: 5px;
+            }
+            &:first-child:before {
+                height: 74px;
+                top: 0;
+            }
+        }
+    }
+}
+
+.landingcontent-section {
+    width: 67%;
+    height: auto;
+    float: left;
+    overflow: hidden;
+    .header-right {
+        width: 100%;
+        padding-right: 30px;
+//        height: 100%;
+    }
+}
+
+.landing-content {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.landing-contblk {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    margin: 127px auto 0;
+    display: inline-block;
+    h1 {
+        font-size: $font-size-large;
+        font-family: $font-family-exlight;
+        font-weight: 200;
+        letter-spacing: -8px;
+        line-height: 110px;
+        padding-bottom: 14px;
+        text-align: left;
+    }
+    h2 {
+        font-size: $txt-medium;
+        font-family: $font-family-exlight;
+        font-weight: 200;
+        letter-spacing: .3px;
+        line-height: 40px;
+        color: $brand-shade1;
+        padding-bottom: 43px;
+        text-align: left;
+    }
+    p {
+        font-size: $font-size-base;
+        line-height: 30px;
+        color: $brand-text-color;
+        text-align: left;
+        margin-bottom: 48px;
+    }
+}
+
+
+
+
+
+//media queries
+@media (min-width: $screen-larger)  { //1520px
+
+}
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-normal) { //1200px- 1399px
+
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { //992px - 1199px
+    .banner-section .logo-block{padding: 50px 30px 0;}
+    .landing-contblk{padding: 0 20px;}
+    .primary-btn, .secondary-btn { font-size: $font-size-h5;}
+
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { //768px - 991px
+
+    .banner-section .logo-block{padding: 50px 30px 0;}
+    .landing-contblk{padding: 0 10px;}
+    .primary-btn, .secondary-btn { font-size: $font-size-h5;}
+    .landing-contblk h1{font-size: $font-size-h1; line-height: 60px; letter-spacing: 1px;}
+    .primary-btn, .secondary-btn{margin: 5px 0;}
+    .landing-contblk {margin: 40px auto 0;}
+}
+@media (max-width: $screen-xs-max) { //767px
+
+    .banner-section,
+    .landingcontent-section{width: 100%;}
+    .landing-header .header-container{height: 0px;}
+    .banner-section .logo-block{max-width: 100%;float: left; padding: 20px;}
+
+    .banner-section{height: auto; min-height: 10px; background-size: 100% 100%;}
+
+    .banner-section ul li{width:auto; float: left;height: auto; padding: 0px; text-align: left; padding: 0px 10px 0 20px;
+      width: 33.3333%;
+    }
+    .banner-section ul li:first-child {padding-top: 0px;}
+     .banner-section ul li:first-child::before {height: 2px;top: auto;bottom: -10px;}
+     .banner-section ul:before {display: none;}
+     .banner-section ul li:before{width: 70px;height: 2px;content: "";position: absolute;background: $lighter;left: 20px;margin-left: 0;top: auto;bottom: -10px;}
+    .banner-section ul {padding: 39px 0px 34px 10px;}
+
+    .banner-section ul li label{font-size: $font-size-h5; float: none; display: block;width: auto; max-width: none; display: block; }
+    .banner-section ul li span{font-size: $span-small; float: none;width: auto; display: block; line-height: 28px; }
+    .land-mobicontent{width: 100%; height: auto;float: left; text-align: left; padding: 0 20px;}
+    .land-mobicontent h1{font-size: $banner-small; line-height: 66px;color:$lighter; padding: 5px 0;font-family: $font-family-light;}
+    .land-mobicontent h2{font-size:$h2-small;   line-height: 30px;color:$lighter;}
+
+    .landing-contblk{margin: 0px; padding: 15px 20px;}
+    .land-mobilebuttons{width: 100%; float: left; padding-bottom: 15px; a{margin: 5px 0; width: 100%;text-align: left; padding: 10px 20px;}}
+    .land-mobilebuttons .primary-btn i, .land-mobilebuttons  .secondary-btn i{float: right; }
+    .landing-contblk p{margin-bottom: 20px;line-height: 28px;}
+    .footer-container.landing-page{padding-top: 40px;}
+
+    .landingcontent-section .landing-header .header-right{position: absolute; background: $brand-header-bg;}
+}
+@media (max-width: $screen-xxs-min) { //467px
+    .banner-section ul li {padding: 0 10px 0 10px;}
+    .main-contentarea .middle-content-blk h1{font-size: $txt-large;}
+    .banner-section ul li label{font-size: $font-size-small; }
+    .banner-section ul li span{font-size:$size-medium;  }
+    .banner-section ul li:before{left: 10px;}
+     .land-mobicontent{ padding: 0 20px;}
+    .land-mobicontent h1{font-size: $txt-large; line-height: 50px;color:$lighter; padding-bottom: 3px;}
+    .land-mobicontent h2{font-size:$h2-small;   line-height: 30px;color:$lighter;}
+    .land-mobilebuttons .primary-btn, .land-mobilebuttons  .secondary-btn{font-size: $font-size-small;}
+}
+@media (max-width: 320px){
+  .banner-section ul li span{
+    font-size: 14px;
+  }
+}

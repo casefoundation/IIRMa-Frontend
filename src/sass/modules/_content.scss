@@ -1,0 +1,287 @@
+// ***********************************
+// Content
+// ***********************************
+.modal{
+  &#submit_data{
+    .modal-content{
+      overflow: hidden;
+      border-radius: 4px;
+      .modal-header{
+        position: relative;
+        padding: 20px 30px;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 20px;
+        overflow: hidden;
+        line-height: 1.7;
+        .close{
+          margin-top: 7px;
+          opacity: 0.3;
+          position: relative;
+          z-index: 9999;
+          outline: none;
+        }
+        h3{
+          color: #2a93db;
+          font-family: "Gotham-Book";
+          text-transform: uppercase;
+          text-align: left;
+          font-size: 22px;
+          line-height: 1.7;
+          display: block;
+          position: relative;
+          bottom: -5px;
+        }
+      }
+      .modal-body{
+        padding: 0px;
+        p{
+          padding: 15px 30px;
+          margin-bottom: 0px;
+        }
+        .buttons{
+          width: 100%;
+          background: #fff;
+          padding: 20px 30px;
+          border-top: 1px solid #ddd;
+          a{
+            background: #2a93db;
+            color: #fff;
+            border-radius: 70px;
+            font-size: 16px;
+            padding: 17px 55px;
+            border: 0;
+            box-shadow: none;
+            font-family: $font-family-base;
+            max-width: 320px;
+            &:hover{
+              background: #5bc0de;
+            }
+          }
+        }
+      }
+    }
+  }
+  &#give_feedback{
+    .modal-body{
+      padding: 0px;
+      button.close{
+        right: 25px;
+        top: 30px;
+        position: relative;
+        z-index: 999;
+      }
+      iframe{
+        top: -25px;
+        position: relative;
+        height: 540px;
+      }
+    }
+  }
+}
+.main-outercon {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+body.main-pages .main-outercon {
+    position: relative;
+}
+body{
+  &.page-id-12{
+    .main-outercon{
+      &:before{
+        content: '';
+        left: 0px;
+        position: fixed;
+        top: 0px;
+        height: 100%;
+        width: 15px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8bc9a3+0,1e71a6+100 */
+        background: rgb(139,201,163); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(139,201,163,1) 0%, rgba(30,113,166,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(139,201,163,1) 0%,rgba(30,113,166,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(139,201,163,1) 0%,rgba(30,113,166,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc9a3', endColorstr='#1e71a6',GradientType=0 ); /* IE6-9 */
+        @media (max-width: 767px){
+          display: none;
+        }
+      }
+    }
+  }
+  &.page-id-6{
+    .main-outercon{
+      &:before{
+        content: '';
+        left: 0px;
+        position: fixed;
+        top: 0px;
+        height: 100%;
+        width: 15px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8bc9a3+0,1e71a6+100 */
+        background: rgb(139,201,163); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(139,201,163,1) 0%, rgba(30,113,166,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(139,201,163,1) 0%,rgba(30,113,166,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(139,201,163,1) 0%,rgba(30,113,166,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc9a3', endColorstr='#1e71a6',GradientType=0 ); /* IE6-9 */
+        @media (max-width: 767px){
+          display: none;
+        }
+      }
+    }
+  }
+  &.page-id-8{
+    .main-outercon{
+      &:before{
+        content: '';
+        left: 0px;
+        position: fixed;
+        top: 0px;
+        height: 100%;
+        width: 15px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8bc9a3+0,1e71a6+100 */
+        background: rgb(139,201,163); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(139,201,163,1) 0%, rgba(30,113,166,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(139,201,163,1) 0%,rgba(30,113,166,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(139,201,163,1) 0%,rgba(30,113,166,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc9a3', endColorstr='#1e71a6',GradientType=0 ); /* IE6-9 */
+        @media (max-width: 767px){
+          display: none;
+        }
+      }
+    }
+  }
+}
+body.main-pages .main-outercon:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: "";
+    width: 14px;
+    height: 100%;
+    z-index: 99999;
+    @include linear-gradient($brand-shade7, $brand-shade8);
+}
+
+.betabadge-block {
+    width: 113px;
+    height: 113px;
+    position: fixed;
+
+    left: 0px;
+    top: 0px;
+    z-index: 9999999;
+    img {
+        width: 100%;
+    }
+}
+
+.main-contentarea {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    .left-sidebar-outer {
+        $left-sidebar-width: 175px;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        top: 0;
+        width: $left-sidebar-width;
+        z-index: 1027;
+        position: absolute;
+        @media (min-width: 1520px) and (max-width: 1540px){
+
+
+          left: 20px;
+        }
+        .left-sidebar-content.fixed {
+            position: fixed;
+            width: $left-sidebar-width;
+            margin-top: 0;
+            top: 75px;
+        }
+
+    }
+    .middle-content-blk {
+        border: 0 none;
+        height: auto;
+        margin: 0 250px 0 175px;
+        padding: 0 25px 0 60px;
+        position: relative;
+        h1 {
+            line-height: 72px;
+            font-family: $font-family-exlight;
+            font-weight: 200;
+            font-size: $h1-small;
+            color: $brand-text-dark;
+            text-transform: capitalize;
+            padding-bottom: 25px;
+        }
+    }
+    .right-sidebar-outer {
+        bottom: 0;
+        height: 100%;
+        //overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 250px;
+        z-index: 10;
+    }
+}
+
+#testing-feedback {
+    float: left;
+    width: 100%;
+}
+.logged-in.admin-bar {
+    .main-contentarea .left-sidebar-outer .left-sidebar-content.fixed {
+        top: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+//media queries
+@media (min-width: $screen-larger)  { //1520px
+    .container{width: 1490px;}
+	.main-contentarea .middle-content-blk h1{font-size: $font-size-h1;padding-bottom: 55px;}
+    .main-contentarea .middle-content-blk {margin: 0 290px 0 210px; padding: 0 25px;}
+    .main-contentarea .right-sidebar-outer{width: 290px;}
+}
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-normal) { //1200px- 1399px
+    .main-contentarea .middle-content-blk {margin: 0 250px 0 175px; padding: 0 25px;}
+    .main-contentarea .right-sidebar-outer{width: 250px;}
+
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { //992px - 1199px
+    .main-contentarea .middle-content-blk {margin: 0 220px 0 175px; padding: 0 25px;}
+    .main-contentarea .right-sidebar-outer{width: 220px;}
+
+
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { //768px - 991px
+    .main-contentarea .middle-content-blk {margin: 0 150px; padding: 0 25px;}
+    .main-contentarea .left-sidebar-outer,
+    .main-contentarea .right-sidebar-outer{width: 150px;}
+
+
+}
+@media (max-width: $screen-xs-max) { //767px
+    .main-contentarea .middle-content-blk {margin: 0; padding: 0; width: 100%;}
+    .main-contentarea .left-sidebar-outer,
+    .main-contentarea .right-sidebar-outer{width: 100%; position: relative;}
+    .betabadge-block{width: 60px; height: 60px; z-index: 9999999;}
+    .betabadge-block.landing-page{width: 60px; height: 60px; z-index: 9999999;}
+
+}
+@media (max-width: $screen-xxs-min) { //467px
+}

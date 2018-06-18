@@ -1,0 +1,110 @@
+// ***********************************
+// Typography
+// ***********************************
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $text-color;
+	font-weight: $headings-font-weight;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    line-height: 130px;
+}
+h2 {
+    font-size: $font-size-h2;
+    line-height: 24px;
+	font-weight: $headings-font-weight-light;
+}
+h3 {
+    font-size: $font-size-h3;
+    line-height: 20px;
+	font-weight: $headings-font-weight;
+    text-align: center;
+}
+h4 {
+    font-size:$font-size-h4;
+    line-height: 20px;
+	font-weight: $headings-font-weight;
+}
+h5 {
+    font-family:$font-family-base;
+    font-size: $font-size-h5;
+    line-height: 18px;
+	font-weight: $headings-font-weight-bold;
+}
+h6 {
+    font-family: $font-family-base;
+    font-size: $font-size-h6;
+    line-height: 18px;
+    
+	font-weight: $headings-font-weight-bold;
+}
+
+p {
+    margin-bottom: 20px;
+}
+a {
+//    color: $link-color;
+    text-decoration: none;
+    @include transit;
+}
+
+a:visited,
+a:active,
+a:hover,
+a:focus {
+    outline: 0;
+    text-decoration: none; 
+}
+strong{
+    font-family: $headings-font-weight-bold;
+}
+input,
+textarea,
+selectbox {
+    -webkit-appearance: none;
+}
+
+
+//media queries 
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-normal) { //1200px- 1399px
+   
+    
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { //992px - 1199px
+   
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { //768px - 991px
+    body{  font-size: 14px;     }
+   h2 {  line-height: 48px;
+       font-size: 48px;}
+   
+}
+@media (max-width: $screen-xs-max) { //767px
+    body{  font-size: 14px;       }
+    h1 {  font-size: 40px;  line-height: 45px;}
+    h2 {line-height: 55px;}
+    h4 {  font-size: 22px;  line-height: 28px;}
+    h5 {  font-size: 14px;}
+    p {   margin-bottom: 20px;}
+    
+}
+@media (max-width: $screen-xxs-min) { //467px
+    
+     h2 {         font-size: 38px;}
+    h4 {    font-size: 19px;    line-height: 28px;}
+    
+}
+

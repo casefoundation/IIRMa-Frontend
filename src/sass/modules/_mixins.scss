@@ -1,0 +1,142 @@
+@import "_variables";
+// -------------------------- -------------------------- -------------------------- --------------------------
+@mixin border-radius($radius: 5px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-styles($color, $width) {
+    //@include border-styles($orange-col, 1px);
+    border: {
+        color: $color;
+        width: $width;
+        style: solid;
+    }
+}
+
+@mixin transit {
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -moz-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+}
+
+ @mixin transition($transition-property, $transition-time, $method) {  //@include transition(all, 0.3s, ease-in-out);
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin transform-translatey($val) {
+    //@include transform-translatey(-50%);
+    -webkit-transform: translateY($val);
+    -moz-transform: translateY($val);
+    -o-transform: translateY($val);
+    -ms-transform: translateY($val);
+    transform: translateY($val);
+}
+
+@mixin transform-translatex($val) {
+    //@include transform-translatex(-50%);
+    -webkit-transform: translateX($val);
+    -moz-transform: translateX($val);
+    -o-transform: translateX($val);
+    -ms-transform: translateX($val);
+    transform: translateX($val);
+}
+
+@mixin transform-scaleX($val) {
+    //@include transform-scaleX(0);
+    -webkit-transform: scaleX($val);
+    transform: scaleX($val);
+}
+
+@mixin linear-gradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+@mixin white-space-pre-wrap{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+ /**************************************************************************/
+
+
+.primary-btn{
+   	background: $brand-blue-bg;
+	font-size: $size-medium;
+	color: $lighter;
+	text-transform: uppercase;
+	font-family: $font-family-medium;
+    font-weight: 500;
+        @include transit;
+	float: left;
+	width: auto;
+	padding: 10px 24px 10px 36px;
+	border: none;
+	@include border-radius(50px);
+
+    &:hover {
+        background: $brand-info;
+		color: $lighter;
+        a {
+            color: $lighter;
+        }
+    }
+    i{
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        margin-left: 14px;
+        img{width:100%;}
+    }
+
+    &.no-float {
+        float: none;
+    }
+}
+
+.secondary-btn{
+	@extend .primary-btn;
+   	background: $brand-secondary-color;
+	padding: 10px 20px;
+    margin-right: 10px;
+
+    &:hover {
+        background: $brand-success;
+    } i{
+        width: 23px;
+        height: 23px;
+        margin-left: 7px;
+    }
+}
+
+
+.btn-border{
+    padding: 8px 22px;
+    line-height: 22px;
+    border: 1px solid $brand-primary;
+    color: $brand-primary;
+    background: none;
+    font-size: $font-size-base;
+    font-family: $font-family-reg;
+    text-transform: none;
+    &:hover{
+        background: $brand-primary;
+        color: $lighter;
+        border: 1px solid $brand-primary;
+    }
+}

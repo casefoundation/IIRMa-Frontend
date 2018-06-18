@@ -1,0 +1,413 @@
+// ***********************************
+// FAQ
+// ***********************************
+.accordian-content {
+    float: left;
+    width: 100%;
+    .panel, .pseudo-panel {
+        border: none;
+        box-shadow: none;
+        background: $brand-bg-light;
+        @include border-radius(2px);
+        padding: 13px 23px 16px;
+        position: relative;
+        margin-bottom: 15px;
+        float: left;
+        width: 100%;
+        &:hover {
+            h4 {
+                color: $brand-primary;
+                //font-family: $font-family-medium;
+            }
+            &:before {
+                content: "";
+                left: 0;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                position: absolute;
+                background: $brand-primary;
+            }
+        }
+        &.active-tab {
+            .panel-heading h4 {
+              color: $brand-primary;
+            }
+            .panel-heading .trigger {
+                background: url(../images/arrow-top.svg) no-repeat right top;
+                background-size: 15px 15px;
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+        }
+    }
+    .panel-heading {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background: $brand-bg-light;
+        h4 {
+            width: 91%;
+            font-family: $font-family-base;
+            color: $brand-text-color;
+            display: inline-block;
+            font-size: $font-size-base;
+            line-height: 25px;
+        }
+        .trigger {
+            float: right;
+            background: url(../images/arrow-bottom.svg) no-repeat right top;
+            background-size: 15px 15px;
+            width: 100%;
+            height: auto;
+            position: relative;
+            cursor: pointer;
+        }
+    }
+    .panel-collapse {
+        padding-right: 40px;
+        display:none;
+
+        p {
+            font-size: $font-size-base;
+            color: $brand-text-color;
+            margin-bottom: 15px;
+
+        }
+        ol {
+            font-size: $font-size-base;
+            color: $brand-text-color;
+            margin-bottom: 0;
+            li {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.newsletter-block {
+    float: left;
+    width: 100%;
+    background: $brand-bg-color;
+    padding: 32px 16px 37px;
+    margin-top: 100px;
+    img {
+        float: left;
+        width: 59px;
+        height: 47px;
+        margin-bottom: 6px;
+    }
+    h2 {
+        float: left;
+        width: 100%;
+        font-family: $font-family-bold;
+        font-weight: 700;
+        color: $brand-primary;
+        padding-bottom: 4px;
+    }
+    p {
+        float: left;
+        width: 100%;
+        font-size: $size-small;
+        line-height: 25px;
+    }
+    .input-group {
+        float: left;
+        width: 100%;
+        input {
+            border: 1px solid $brand-shade9;
+            @include border-radius(3px);
+            background: $lighter;
+            padding: 10px 14px;
+            height: 52px;
+            float: left;
+            width: 71%;
+            font-size: $size-small;
+            color: $brand-shade1;
+            font-family: $font-family-base;
+        }
+        .input-group-btn {
+            float: left;
+            .btn.btn-secondary {
+                float: left;
+                background: $brand-shade5;
+                @include border-radius(2px);
+                border: none;
+                font-size: $font-size-base;
+                color: $lighter;
+                font-family: $font-family-base;
+                height: 52px;
+                width: 60px;
+                margin-left: 4px;
+                @include transit;
+                padding: 10px 11px;
+                &:hover {
+                    background: $brand-info;
+                    color: $lighter;
+                }
+            }
+        }
+    }
+    #signup_form {
+        float: left;
+        .response-msg {
+            display:none;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 300;
+
+            float: left;
+            width: 100%;
+            font-family: $font-family-bold;
+            font-weight: 700;
+            color: $brand-primary;
+            padding-bottom: 4px;
+            text-align: left;
+        }
+        #mce-email-error {
+            color: red;
+            font-size: 13px;
+        }
+        .field-email {
+            width: 70%;
+            float: left;
+            padding-right: 5px;
+            @media (max-width: 1199px){
+                width: 100%;
+                padding-right: 0px;
+            }
+            input[type="email"]{
+                border: 1px solid $brand-shade9;
+                @include border-radius(3px);
+                background: $lighter;
+                padding: 10px 14px;
+                height: 52px;
+                float: left;
+                width: 100%;
+                font-size: $size-small;
+                color: $brand-shade1;
+                font-family: $font-family-base;
+            }
+        }
+        .field-submit {
+            float: left;
+            width: 30%;
+            @media (max-width: 1199px){
+                width: 100%;
+            }
+            input[type="submit"] {
+                float: left;
+                background: $brand-shade5;
+                @include border-radius(2px);
+                border: none;
+                font-size: $font-size-base;
+                color: $lighter;
+                font-family: $font-family-base;
+                height: 52px;
+                width: 100%;
+                @include transit;
+                padding: 10px 11px;
+                font-size: 14px;
+                &:hover {
+                    background: $brand-info;
+                    color: $lighter;
+                }
+            }
+        }
+
+        input {
+            &[value="Processing"]{
+                font-size: 10px;
+                padding: 10px 5px;
+                @media (max-width: 1199px){
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .nf-form-cont {
+        float: left;
+
+        h3 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 300;
+
+            float: left;
+            width: 100%;
+            font-family: $font-family-bold;
+            font-weight: 700;
+            color: $brand-primary;
+            padding-bottom: 4px;
+            text-align: left;
+        }
+
+        .nf-form-fields-required, .nf-form-errors {
+            display: none;
+        }
+        .nf-error-msg {
+            font-size: 13px;
+        }
+        .nf-form-content {
+            nf-field {
+                &:nth-child(2){
+                    width: 70%;
+                    float: left;
+                    padding-right: 5px;
+                    @media (max-width: 1199px){
+                      width: 100%;
+                      padding-right: 0px;
+                    }
+                }
+                &:nth-child(3){
+                    float: left;
+                    width: 30%;
+                    @media (max-width: 1199px){
+                      width: 100%;
+                    }
+                }
+                .nf-field-container {
+                    margin-bottom: 0;
+                }
+                .ninja-forms-field {
+                    &[type="email"]{
+                        border: 1px solid $brand-shade9;
+                        @include border-radius(3px);
+                        background: $lighter;
+                        padding: 10px 14px;
+                        height: 52px;
+                        float: left;
+                        width: 100%;
+                        font-size: $size-small;
+                        color: $brand-shade1;
+                        font-family: $font-family-base;
+                    }
+                    &[type="button"] {
+                      
+                        float: left;
+                        background: $brand-shade5;
+                        @include border-radius(2px);
+                        border: none;
+                        font-size: $font-size-base;
+                        color: $lighter;
+                        font-family: $font-family-base;
+                        height: 52px;
+                        width: 100%;
+                        @include transit;
+                        padding: 10px 11px;
+                        font-size: 14px;
+                        &:hover {
+                            background: $brand-info;
+                            color: $lighter;
+                        }
+                    }
+                    &[value="Processing"]{
+                      font-size: 10px;
+                      padding: 10px 5px;
+                      @media (max-width: 1199px){
+                        font-size: 14px;
+                      }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.nav-close{
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+//media queries
+@media (min-width: $screen-larger)  { //1520px
+   .newsletter-block{
+	padding: 32px 23px 37px;
+	margin-top: 128px;
+
+	.input-group{
+		input{
+			width: 176px;
+		}
+		.input-group-btn{
+
+			.btn.btn-secondary{
+				width: 64px;
+				padding: 10px 12px 10px 14px;
+			}
+		}
+	}
+}
+}
+
+
+
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-normal) { //1200px- 1399px
+
+
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { //992px - 1199px
+
+    .main-contentarea .middle-content-blk h1{font-size: 35px;line-height: 40px;padding-bottom: 50px;}
+    .newsletter-block{margin-top: 90px;}
+
+
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { //768px - 991px
+
+    .main-contentarea .middle-content-blk h1{font-size: 28px;line-height: 40px;padding-bottom: 50px;}
+    .newsletter-block h2{font-size: $font-size-base;line-height: 24px;}
+    .newsletter-block{
+        margin-top: 90px;
+        .nf-form-cont {
+            h3 {font-size: $font-size-base;line-height: 24px;}
+        }
+    }
+
+}
+@media (max-width: $screen-xs-max) { //767px
+    body.main-pages .main-outercon:before{width: 5px; z-index: 99999;}
+    .main-contentarea .middle-content-blk h1{font-size: 60px; line-height: 65px;padding-bottom: 49px;}
+    .main-contentarea{padding: 38px 20px 0;}
+    .accordian-content .panel {
+        padding: 10px;
+        padding-right: 5px;
+        padding-top: 7px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: rgba(0, 0, 0, 0.08);
+            top: 0;
+            right: 0;
+        }
+        &.active-tab:before {
+                content: "";
+                left: 0;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                position: absolute;
+                background: $brand-primary;
+            }
+    }
+    /*.accordian-content .panel-heading a{position: absolute;right: 0;top: 0;background-color: $brand-shade11;width: 24px;height: 22px;background-position: 5px 5px;}
+    .accordian-content .panel.active-tab .panel-heading a{position: absolute;right: 0;top: 0;background-color: $brand-shade11;width: 24px;height: 22px;background-position: 5px 5px;}*/
+    .header-container.open .mobile-nav{display: none !important;}
+    .header-container.open .nav-close{display: block;}
+}
+@media (max-width: $screen-xxs-min) { //467px
+}
