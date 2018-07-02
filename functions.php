@@ -60,7 +60,7 @@ add_action( 'after_setup_theme', 'network_map_setup' );
  */
 function network_map_scripts() {
 	$styles_version  = '1.1.9';
-	$scripts_version = '1.1.27';
+	$scripts_version = '1.1.28';
 
 	/****************
 	 * STYLES

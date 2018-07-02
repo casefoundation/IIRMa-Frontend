@@ -52,7 +52,7 @@ var NodeDescription = React.createClass({
         var styles_str = !this.state.loading && (typeof this.state.data.company_logo!='undefined') ? {"backgroundImage":"url("+this.state.data.company_logo+")"} : {};
         var header_logo = !this.state.loading && (typeof this.state.data.company_logo!='undefined') ? <div className="logo-container" style={styles_str}></div> : '';
 
-        var do_not_render = ["id", "type", "impactspace_id", "impactspace_updated_at", "created_at", "name", "updated_at", "slug", "investors", "companies", "crunchbase_id", "crunchbase_updated_at", "company_logo", "crunchbase_url", "network_map_ready"];
+        var do_not_render = ["id", "type", "impactspace_id", "impactspace_updated_at", "created_at", "name", "updated_at", "slug", "investors", "companies", "crunchbase_id", "crunchbase_updated_at", "company_logo", "crunchbase_url", "network_map_ready", "last_existence_verification"];
         var do_not_if_value = ["0000-00-00"];
         var follow_order = ["two-columns","headquarters", "founded", "founders", "industry", "legal structure", "mission statement", "website", "external links", "description", "number of employees", "investor type","phone", "email", "social"];
 
