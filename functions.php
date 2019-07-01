@@ -115,15 +115,15 @@ add_action( 'wp_enqueue_scripts', 'network_map_scripts' );
 function register_explorer_scripts( $scripts_version ) {
 	if ( is_page( 'explore' ) ) {
 		wp_register_script(
-			'react',
+			'nm-react',
 			get_template_directory_uri() . '/js/react.min.js',
 			null,
 			'1.6.1'
 		); // React js
 		wp_register_script(
-			'react-dom',
+			'nm-react-dom',
 			get_template_directory_uri() . '/js/react-dom.min.js',
-			array( 'react' ),
+			array( 'nm-react' ),
 			'1.6.1'
 		); // ReactDOM js
 
@@ -146,8 +146,8 @@ function register_explorer_scripts( $scripts_version ) {
 
 		$network_map_deps = [
 			'jquery',
-			'react',
-			'react-dom',
+			'nm-react',
+			'nm-react-dom',
 			'sigma',
 			'sigma-plugins-animate',
 			'sigma-layout-force-atlas-2',
