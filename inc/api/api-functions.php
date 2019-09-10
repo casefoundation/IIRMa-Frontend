@@ -499,7 +499,7 @@ function process_get_data_info(
 					}
 				}
 
-				list($highest_fund,$sum_funds) = sum_funds( $item_ob, $item, $highest_fund );
+				list($highest_fund,$sum_funds) = sum_funds( $item_ob, $investment, $highest_fund );
 				$investments_count++;
 				if ( ! $already_exists ) {
 					$investment_ob                           = [
@@ -553,7 +553,7 @@ function incress_data( $child_type, $companies_count, $investors_count ) {
  */
 function sum_funds( &$item_ob, $item, $highest_fund ) {
 	$sum_funds = 0;
-	if ( isset( $investment['funds'] ) ) {
+	if ( isset( $item['funds'] ) ) {
 		$sum_funds = count( $item['funds'] );
 
 		if ( $sum_funds > $highest_fund ) {
